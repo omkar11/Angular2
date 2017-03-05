@@ -36,7 +36,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products">
+                    <!--In the following code 'listFilter' is the userinput and 'productFilter' is the custom filter -->
+                    <tr *ngFor="let product of products | productFilter: listFilter">
                         <td>
                             <img    *ngIf="showImage"
                                     src={{product.imageUrl}}
